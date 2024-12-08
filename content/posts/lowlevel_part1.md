@@ -16,7 +16,7 @@ You will need some basic understanding of programming to follow the course.
 
 At first we are going to set up the tools we need to follow the course.
 So the first thing is to make sure that you have an C Compiler e.g. `gcc` installed. For this, you could refer to [official installation manual](https://gcc.gnu.org/install/)
-or simply use the package manager your OS.
+or simply use the package manager your OS provides.
 
 ## Editor / IDE
 
