@@ -1,4 +1,4 @@
-base_url = "https://zibebe.github.io"
+base_url = "https://zibebe.net"
 compile_sass = true
 build_search_index = false
 generate_feeds = true
