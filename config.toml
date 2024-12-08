@@ -1,0 +1,26 @@
+base_url = "https://zibebe.net"
+compile_sass = true
+build_search_index = false
+generate_feeds = true
+minify_html = true
+theme = "apollo"
+taxonomies = [{ name = "tags" }]
+
+[markdown]
+highlight_code = true
+highlight_theme = "monokai"
+
+[extra]
+theme = "toggle"
+toc  = true
+fancy_code = true
+socials = [
+  { name = "github", url = "https://github.com/zibebe/", icon = "github" },
+  { name = "x", url = "https://x.com/zibebe_", icon = "x-twitter" },
+]
+menu = [
+    { name = "/posts", url = "/posts", weight = 1 },
+    { name = "/projects", url = "/projects", weight = 2 },
+    { name = "/about", url = "/about", weight = 3 },
+    { name = "/tags", url = "/tags", weight = 4 },
+]
