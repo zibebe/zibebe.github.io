@@ -6,53 +6,98 @@ date = "2024-12-08"
 tags=["programming","c"]
 +++
 
-In this course i will teach you the essentials about low-level programming. 
-Starting with some C programming essentials will give you the foundation for everything that follow.
-You will need some basic understanding of programming to follow the course.
+n this course, I will guide you through the essentials of low-level programming, starting with the fundamentals of C programming. This foundation will be crucial for understanding the more advanced topics that follow. While some basic programming knowledge is helpful, this course is designed to be accessible to those with a beginner to intermediate skill level.
+
+Certainly! Here’s an improved version of the sections:
+
+---
 
 # Environment Setup
 
 ## Compiler
 
-At first we are going to set up the tools we need to follow the course.
-So the first thing is to make sure that you have an C Compiler e.g. `gcc` installed. For this, you could refer to [official installation manual](https://gcc.gnu.org/install/)
-or simply use the package manager your OS provides.
+To get started with this course, you need to set up the necessary tools. The first step is to ensure you have a C compiler installed, such as `gcc`. You can refer to the [official installation manual](https://gcc.gnu.org/install/) for detailed instructions, or you can use your operating system's package manager to install it. Here are some quick commands for popular operating systems:
 
-## Editor / IDE
+- **Installation (Linux/macOS):**
+  ```console
+  $ sudo apt-get install gcc  # Debian/Ubuntu
+  $ sudo dnf install gcc      # Fedora
+  $ brew install gcc          # macOS
+  ```
+- **Installation (Windows):**
+  You can install MinGW, which includes `gcc`. Follow the instructions on the [MinGW website](https://mingw-w64.org/doku.php/download).
 
-As it doesn't really matter which editor you use, you are free to choose any editor. My personal recommendations would be any terminal editor e.g. [vim](https://www.vim.org) or [helix](https://helix-editor.com)
-as we live most of the time in this course in a terminal anyway.
+## Text Editor
+
+While the choice of editor or integrated development environment (IDE) is largely a matter of personal preference, I recommend using a terminal-based editor for this course. This is because we will be working extensively in the terminal. I absolutely recommend getting started with `Vim` as a terminal editor:
+
+- **Installation (Linux/macOS)**
+    ```console
+    $ sudo apt-get install vim  # Debian/Ubuntu
+    $ sudo dnf install vim      # Fedora
+    $ brew install vim          # macOS
+    ```
+- **Installation (Windows):**
+  Follow the instructions on the [Vim website](https://www.vim.org/download.php).
+
+Anyhow, choose the tool that you are most comfortable with, and you'll be well-prepared to follow along with the course.
+
+Certainly! Here’s an improved version of the section:
+
+---
 
 ## Test the Setup
 
-We test the setup by simply creating a `hello_world.c` file and fill it with the following content.
+To ensure your environment is set up correctly, we will create a simple "Hello World" program. Follow these steps:
 
-```c
-#include <stdio.h>
+1. **Create the `hello_world.c` file:**
 
-int main(int argc, char **argv) {
-  printf("Hello World!\n");
-  return 0;
-}
-```
+   Open your chosen editor or IDE and create a new file named `hello_world.c`. Add the following content to the file:
 
-Compile it to a binary with the following command:
+   ```c
+   #include <stdio.h>
 
-```console
-$ gcc hello_world.c -o hello_world
-```
+   int main(int argc, char **argv) {
+       printf("Hello World!\n");
+       return 0;
+   }
+   ```
 
-Run the binary
+2. **Compile the Program:**
 
-```console
-$ ./hello_world
-Hello World!
-```
+   Open a terminal and navigate to the directory where you saved `hello_world.c`. Compile the program using the following command:
 
-# Memory Allocation
+   ```console
+   $ gcc hello_world.c -o hello_world
+   ```
 
-It is very important to understand Memory Allocation before getting started with low level programming.
-Here is a short comparison between the `Stack` and `Heap` memory:
+   This command compiles `hello_world.c` and creates an executable file named `hello_world`.
+
+3. **Run the Program:**
+
+   Execute the compiled binary by running:
+
+   ```console
+   $ ./hello_world
+   ```
+
+   If everything is set up correctly, you should see the following output:
+
+   ```console
+   Hello World!
+   ```
+
+If you encounter any issues, double-check that your compiler and editor are installed correctly and that you are in the correct directory when running the commands.
+
+# Memory Management
+
+Understanding memory management is crucial for effective low-level programming, as it directly impacts the performance, reliability, and efficiency of your code. Here is a short comparison between `Static`, `Stack`, and `Heap`:
+
+## Static
+- **Lifetime**: Variables are allocated at compile time and exist for the entire duration of the program. They are not created or destroyed during runtime.
+- **Size**: The size is fixed and determined at compile time.
+- **Speed**: Accessing static variables is relatively fast because they have a fixed memory location.
+- **Usage**: Ideal for global variables, static local variables, and constants that need to retain their value across function calls and throughout the program's execution.
 
 ## Stack
 - **Lifetime:** Variables are allocated on the stack with a known, fixed lifetime (usually tied to function scope).
@@ -66,10 +111,15 @@ Here is a short comparison between the `Stack` and `Heap` memory:
 - **Speed:** Accessing variables stored in the heap is slower because there's no direct access and more indirection through pointers.
 - **Usage:** Ideal for dynamic memory allocation, such as when allocating large structures that need to persist across function calls.
 
-In summary, the Stack provides ***fast but temporary storage***, while the Heap offers ***slower but persistent storage***.
+In summary:
+
+- `Static` provides persistent storage that exists for the entire duration of the program.
+- `Stack` provides fast but temporary storage, ideal for local variables and function parameters.
+- `Heap` offers slower but flexible and persistent storage, suitable for dynamic memory allocation and large data structures.
 
 If you want to get more informations about memory allocation and management here are some useful links:
 - [Stack-based memory allocation](https://en.wikipedia.org/wiki/Stack-based_memory_allocation)
 - [Memory management](https://en.wikipedia.org/wiki/Memory_management)
 
 # References and Pointers in C
+
