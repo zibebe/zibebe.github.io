@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://zibebe.net/</loc>
+    </url>
+    <url>
+        <loc>https://zibebe.net/about/</loc>
+    </url>
+    <url>
+        <loc>https://zibebe.net/posts/</loc>
+    </url>
+    <url>
+        <loc>https://zibebe.net/posts/lowlevel-part1/</loc>
+        <lastmod>2024-12-08</lastmod>
+    </url>
+    <url>
+        <loc>https://zibebe.net/posts/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://zibebe.net/projects/</loc>
+    </url>
+    <url>
+        <loc>https://zibebe.net/projects/project-1/</loc>
+    </url>
+    <url>
+        <loc>https://zibebe.net/tags/</loc>
+    </url>
+    <url>
+        <loc>https://zibebe.net/tags/c/</loc>
+    </url>
+    <url>
+        <loc>https://zibebe.net/tags/programming/</loc>
+    </url>
+</urlset>
