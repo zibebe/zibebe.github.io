@@ -16,7 +16,6 @@ toc  = true
 fancy_code = true
 socials = [
   { name = "github", url = "https://github.com/zibebe/", icon = "github" },
-  { name = "x", url = "https://x.com/zibebe_", icon = "x-twitter" },
 ]
 menu = [
     { name = "/posts", url = "/posts", weight = 1 },
